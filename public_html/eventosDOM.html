@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+
+
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <a class="navbar-brand" href="#">JavaScript</a>
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Hola mundo <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="variables.html">Variables <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tiposDatos.html">Tipos de Datos <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="arreglos.html">Arreglos<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="estructurasControl.html">Estructuras de control<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="funciones.html">Funciones<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="scope.html">Scope Javascript<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="manejoString.html">Majeno de String<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="dom.html">DOM (Document Object Model)<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="estilos.html">Estilos<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="eventosDOM.html">Eventos DOM<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="formularios.html">Formularios<span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <br/>
+        <div class="container" >
+
+            <div class="alert alert-da text-center" >
+                <button id="boton"  type="button" class="btn btn-outline-primary">Saludo</button>
+
+                <button type="button" class="btn btn-outline-success">Success</button>
+                <button type="button" class="btn btn-outline-danger">Danger</button>
+                <button type="button" class="btn btn-outline-warning">Warning</button>
+                <button type="button" class="btn btn-outline-info">Info</button>
+                <button type="button" class="btn btn-outline-dark">Dark</button>
+
+                
+                <div class="form-group">
+                    <br/>
+                    <input placeholder="Pulsa" id="boton2" class="form-control"  >
+                </div>
+                
+                <div class="form-group">
+                    <br/>
+                    <input placeholder="Escribe"  id="boton3" class="form-control"  >
+                </div>
+               
+                
+            </div>
+
+
+            <div class="alert alert- text-center" role="alert">
+                <script src="js/eventosDOM.js" type="text/javascript"></script>
+            </div>
+
+
+            <div class="alert alert-primary" role="alert">
+                <pre class="pre-scrollable" >
+(function (){
+    
+    var boton = document.getElementById("boton");
+    
+    var funcion = function (e){
+        alert("Evento saludo de tipo: " + e.type );
+    };
+    
+    boton.addEventListener("click", funcion);
+    
+}());
+                </pre>
+            </div>
+            
+            <div class="alert alert-primary" role="alert">
+                <pre class="pre-scrollable" >
+(function (){
+    
+    var boton = document.getElementById("boton2");
+    
+    var funcion = function (){
+        console.log("focus");
+        boton.value =  "focus";
+    };
+    
+    boton.addEventListener("focus", funcion);
+    
+}());
+                </pre>
+            </div>
+            
+            <div class="alert alert-primary" role="alert">
+                <pre class="pre-scrollable" >
+(function (){
+    
+    var boton = document.getElementById("boton3");
+    
+    var funcion = function (){
+        console.log("change");
+        boton.value =  "change";
+    };
+    
+    boton.addEventListener("change", funcion);
+    
+}());
+                </pre>
+            </div>
+
+
+
+            <div class="alert alert-warning" >
+                <div class="alert alert-danger" role="alert" >
+                    Eventos más importantes definidos en JavaScript y los elementos para los que están definidos
+                </div>
+                <table style=" background: #fff; width: 100%; margin-top:5px;margin-bottom:10px;padding:0px;border:2px solid rgb(204,204,204);border-collapse:collapse;color:rgb(85,85,85);font-family:Verdana,BitStream vera Sans,Helvetica,sans-serif;font-size:12px;line-height:17px"><tbody style="margin:0px;padding:0px"><tr style="margin:0px;padding:0px"><th style="margin:0px;padding:3px 10px;border-top-width:1px;border-right-width:1px;border-left-width:1px;border-top-style:solid;border-right-style:solid;border-left-style:solid;border-top-color:rgb(204,204,204);border-right-color:rgb(204,204,204);border-left-color:rgb(204,204,204);background-color:rgb(237,239,240)">Evento</th><th style="margin:0px;padding:3px 10px;border-top-width:1px;border-right-width:1px;border-left-width:1px;border-top-style:solid;border-right-style:solid;border-left-style:solid;border-top-color:rgb(204,204,204);border-right-color:rgb(204,204,204);border-left-color:rgb(204,204,204);background-color:rgb(237,239,240)">Descripción</th><th style="margin:0px;padding:3px 10px;border-top-width:1px;border-right-width:1px;border-left-width:1px;border-top-style:solid;border-right-style:solid;border-left-style:solid;border-top-color:rgb(204,204,204);border-right-color:rgb(204,204,204);border-left-color:rgb(204,204,204);background-color:rgb(237,239,240)">Elementos para los que está definido</th></tr><tr style="margin:0px;padding:0px"><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)"><code style="margin:0px;padding:0px">onblur</code></td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Deseleccionar el elemento</td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)"><code style="margin:0px;padding:0px">&lt;button&gt;</code>, <code style="margin:0px;padding:0px">&lt;input&gt;</code>, <code style="margin:0px;padding:0px">&lt;label&gt;</code>,<code style="margin:0px;padding:0px">&lt;select&gt;</code>, <code style="margin:0px;padding:0px">&lt;textarea&gt;</code>, <code style="margin:0px;padding:0px">&lt;body&gt;</code></td></tr><tr style="margin:0px;padding:0px"><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)"><code style="margin:0px;padding:0px">onchange</code></td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Deseleccionar un elemento que se ha modificado</td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)"><code style="margin:0px;padding:0px">&lt;input&gt;</code>, <code style="margin:0px;padding:0px">&lt;select&gt;</code>, <code style="margin:0px;padding:0px">&lt;textarea&gt;</code></td></tr><tr style="margin:0px;padding:0px"><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)"><code style="margin:0px;padding:0px">onclick</code></td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Pinchar y soltar el ratón</td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Todos los elementos</td></tr><tr style="margin:0px;padding:0px"><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)"><code style="margin:0px;padding:0px">ondblclick</code></td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Pinchar dos veces seguidas con el ratón</td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Todos los elementos</td></tr><tr style="margin:0px;padding:0px"><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)"><code style="margin:0px;padding:0px">onfocus</code></td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Seleccionar un elemento</td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)"><code style="margin:0px;padding:0px">&lt;button&gt;</code>, <code style="margin:0px;padding:0px">&lt;input&gt;</code>, <code style="margin:0px;padding:0px">&lt;label&gt;</code>,<code style="margin:0px;padding:0px">&lt;select&gt;</code>, <code style="margin:0px;padding:0px">&lt;textarea&gt;</code>, <code style="margin:0px;padding:0px">&lt;body&gt;</code></td></tr><tr style="margin:0px;padding:0px"><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)"><code style="margin:0px;padding:0px">onkeydown</code></td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Pulsar una tecla y no soltarla</td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Elementos de formulario y <code style="margin:0px;padding:0px">&lt;body&gt;</code></td></tr><tr style="margin:0px;padding:0px"><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)"><code style="margin:0px;padding:0px">onkeypress</code></td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Pulsar una tecla</td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Elementos de formulario y <code style="margin:0px;padding:0px">&lt;body&gt;</code></td></tr><tr style="margin:0px;padding:0px"><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)"><code style="margin:0px;padding:0px">onkeyup</code></td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Soltar una tecla pulsada</td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Elementos de formulario y <code style="margin:0px;padding:0px">&lt;body&gt;</code></td></tr><tr style="margin:0px;padding:0px"><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)"><code style="margin:0px;padding:0px">onload</code></td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Página cargada completamente</td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)"><code style="margin:0px;padding:0px">&lt;body&gt;</code></td></tr><tr style="margin:0px;padding:0px"><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)"><code style="margin:0px;padding:0px">onmousedown</code></td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Pulsar un botón del ratón y no soltarlo</td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Todos los elementos</td></tr><tr style="margin:0px;padding:0px"><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)"><code style="margin:0px;padding:0px">onmousemove</code></td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Mover el ratón</td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Todos los elementos</td></tr><tr style="margin:0px;padding:0px"><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)"><code style="margin:0px;padding:0px">onmouseout</code></td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">El ratón <em style="margin:0px;padding:0px">“sale”</em> del elemento</td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Todos los elementos</td></tr><tr style="margin:0px;padding:0px"><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)"><code style="margin:0px;padding:0px">onmouseover</code></td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">El ratón <em style="margin:0px;padding:0px">“entra”</em> en el elemento</td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Todos los elementos</td></tr><tr style="margin:0px;padding:0px"><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)"><code style="margin:0px;padding:0px">onmouseup</code></td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Soltar el botón del ratón</td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Todos los elementos</td></tr><tr style="margin:0px;padding:0px"><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)"><code style="margin:0px;padding:0px">onreset</code></td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Inicializar el formulario</td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)"><code style="margin:0px;padding:0px">&lt;form&gt;</code></td></tr><tr style="margin:0px;padding:0px"><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)"><code style="margin:0px;padding:0px">onresize</code></td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Modificar el tamaño de la ventana</td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)"><code style="margin:0px;padding:0px">&lt;body&gt;</code></td></tr><tr style="margin:0px;padding:0px"><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)"><code style="margin:0px;padding:0px">onselect</code></td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Seleccionar un texto</td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)"><code style="margin:0px;padding:0px">&lt;input&gt;</code>, <code style="margin:0px;padding:0px">&lt;textarea&gt;</code></td></tr><tr style="margin:0px;padding:0px"><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)"><code style="margin:0px;padding:0px">onsubmit</code></td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Enviar el formulario</td></tr><tr style="margin:0px;padding:0px"><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)"><code style="margin:0px;padding:0px">onunload</code></td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Se abandona la página, por ejemplo al cerrar el navegador</td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)"><code style="margin:0px;padding:0px">&lt;body&gt;</code></td></tr></tbody></table>
+            </div>
+
+            <div class="alert alert-warning" >
+                <div class="alert alert-danger" role="alert" >
+                    Propiedades especificadas por DOM
+                </div>
+                <table style=" background: #fff; width: 100%; margin-top:5px;margin-bottom:10px;padding:0px;border:2px solid rgb(204,204,204);border-collapse:collapse;color:rgb(85,85,85);font-family:Verdana,BitStream vera Sans,Helvetica,sans-serif;font-size:12px;line-height:17px"><tbody style="margin:0px;padding:0px"><tr style="margin:0px;padding:0px"><th style="margin:0px;padding:3px 10px;border-top-width:1px;border-right-width:1px;border-left-width:1px;border-top-style:solid;border-right-style:solid;border-left-style:solid;border-top-color:rgb(204,204,204);border-right-color:rgb(204,204,204);border-left-color:rgb(204,204,204);background-color:rgb(237,239,240)">Propiedad/Método</th><th style="margin:0px;padding:3px 10px;border-top-width:1px;border-right-width:1px;border-left-width:1px;border-top-style:solid;border-right-style:solid;border-left-style:solid;border-top-color:rgb(204,204,204);border-right-color:rgb(204,204,204);border-left-color:rgb(204,204,204);background-color:rgb(237,239,240)">Devuelve</th><th style="margin:0px;padding:3px 10px;border-top-width:1px;border-right-width:1px;border-left-width:1px;border-top-style:solid;border-right-style:solid;border-left-style:solid;border-top-color:rgb(204,204,204);border-right-color:rgb(204,204,204);border-left-color:rgb(204,204,204);background-color:rgb(237,239,240)">Descripción</th></tr><tr style="margin:0px;padding:0px"><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)"><code style="margin:0px;padding:0px">altKey</code></td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Boolean</td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Devuelve <code style="margin:0px;padding:0px">true</code> si se ha pulsado la tecla <code style="margin:0px;padding:0px">ALT</code> y <code style="margin:0px;padding:0px">false</code> en otro caso</td></tr><tr style="margin:0px;padding:0px"><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)"><code style="margin:0px;padding:0px">bubbles</code></td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Boolean</td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Indica si el evento pertenece al flujo de eventos de<em style="margin:0px;padding:0px">bubbling</em></td></tr><tr style="margin:0px;padding:0px"><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)"><code style="margin:0px;padding:0px">button</code></td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Número entero</td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">El botón del ratón que ha sido pulsado. Posibles valores:<p style="margin:0px 0px 10px;padding:0px"><code style="margin:0px;padding:0px">0</code> – Ningún botón pulsado</p><p style="margin:0px 0px 10px;padding:0px"><code style="margin:0px;padding:0px">1</code> – Se ha pulsado el botón izquierdo<br style="margin:0px;padding:0px" /><code style="margin:0px;padding:0px">2</code> – Se ha pulsado el botón derecho</p><p style="margin:0px 0px 10px;padding:0px"><code style="margin:0px;padding:0px">3</code> – Se pulsan a la vez el botón izquierdo y el derecho</p><p style="margin:0px 0px 10px;padding:0px"><code style="margin:0px;padding:0px">4</code> – Se ha pulsado el botón central</p><p style="margin:0px 0px 10px;padding:0px"><code style="margin:0px;padding:0px">5</code> – Se pulsan a la vez el botón izquierdo y el central</p><p style="margin:0px 0px 10px;padding:0px"><code style="margin:0px;padding:0px">6</code> – Se pulsan a la vez el botón derecho y el central</p><p style="margin:0px 0px 10px;padding:0px"><code style="margin:0px;padding:0px">7</code> – Se pulsan a la vez los 3 botones</p></td></tr><tr style="margin:0px;padding:0px"><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)"><code style="margin:0px;padding:0px">cancelable</code></td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Boolean</td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Indica si el evento se puede cancelar</td></tr><tr style="margin:0px;padding:0px"><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)"><code style="margin:0px;padding:0px">cancelBubble</code></td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Boolean</td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Indica si se ha detenido el flujo de eventos de tipo<em style="margin:0px;padding:0px">bubbling</em></td></tr><tr style="margin:0px;padding:0px"><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)"><code style="margin:0px;padding:0px">charCode</code></td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Número entero</td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">El código unicode del carácter correspondiente a la tecla pulsada</td></tr><tr style="margin:0px;padding:0px"><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)"><code style="margin:0px;padding:0px">clientX</code></td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Número entero</td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Coordenada X de la posición del ratón respecto del área visible de la ventana</td></tr><tr style="margin:0px;padding:0px"><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)"><code style="margin:0px;padding:0px">clientY</code></td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Número entero</td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Coordenada Y de la posición del ratón respecto del área visible de la ventana</td></tr><tr style="margin:0px;padding:0px"><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)"><code style="margin:0px;padding:0px">ctrlKey</code></td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Boolean</td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Devuelve <code style="margin:0px;padding:0px">true</code> si se ha pulsado la tecla <code style="margin:0px;padding:0px">CTRL</code> y <code style="margin:0px;padding:0px">false</code>en otro caso</td></tr><tr style="margin:0px;padding:0px"><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)"><code style="margin:0px;padding:0px">currentTarget</code></td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Element</td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">El elemento que es el objetivo del evento</td></tr><tr style="margin:0px;padding:0px"><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)"><code style="margin:0px;padding:0px">detail</code></td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Número entero</td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">El número de veces que se han pulsado los botones del ratón</td></tr><tr style="margin:0px;padding:0px"><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)"><code style="margin:0px;padding:0px">eventPhase</code></td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Número entero</td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">La fase a la que pertenece el evento:<p style="margin:0px 0px 10px;padding:0px"><code style="margin:0px;padding:0px">0</code> – Fase capturing</p><p style="margin:0px 0px 10px;padding:0px"><code style="margin:0px;padding:0px">1</code> – En el elemento destino</p><p style="margin:0px 0px 10px;padding:0px"><code style="margin:0px;padding:0px">2</code> – Fase bubbling</p></td></tr><tr style="margin:0px;padding:0px"><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)"><code style="margin:0px;padding:0px">isChar</code></td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Boolean</td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Indica si la tecla pulsada corresponde a un carácter</td></tr><tr style="margin:0px;padding:0px"><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)"><code style="margin:0px;padding:0px">keyCode</code></td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Número entero</td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Indica el código numérico de la tecla pulsada</td></tr><tr style="margin:0px;padding:0px"><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)"><code style="margin:0px;padding:0px">metaKey</code></td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Número entero</td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Devuelve <code style="margin:0px;padding:0px">true</code> si se ha pulsado la tecla <code style="margin:0px;padding:0px">META</code> y <code style="margin:0px;padding:0px">false</code>en otro caso</td></tr><tr style="margin:0px;padding:0px"><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)"><code style="margin:0px;padding:0px">pageX</code></td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Número entero</td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Coordenada X de la posición del ratón respecto de la página</td></tr><tr style="margin:0px;padding:0px"><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)"><code style="margin:0px;padding:0px">pageY</code></td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Número entero</td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Coordenada Y de la posición del ratón respecto de la página</td></tr><tr style="margin:0px;padding:0px"><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)"><code style="margin:0px;padding:0px">preventDefault()</code></td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Función</td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Se emplea para cancelar la acción predefinida del evento</td></tr><tr style="margin:0px;padding:0px"><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)"><code style="margin:0px;padding:0px">relatedTarget</code></td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Element</td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">El elemento que es el objetivo secundario del evento (relacionado con los eventos de ratón)</td></tr><tr style="margin:0px;padding:0px"><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)"><code style="margin:0px;padding:0px">screenX</code></td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Número entero</td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Coordenada X de la posición del ratón respecto de la pantalla completa</td></tr><tr style="margin:0px;padding:0px"><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)"><code style="margin:0px;padding:0px">screenY</code></td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Número entero</td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Coordenada Y de la posición del ratón respecto de la pantalla completa</td></tr><tr style="margin:0px;padding:0px"><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)"><code style="margin:0px;padding:0px">shiftKey</code></td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Boolean</td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Devuelve <code style="margin:0px;padding:0px">true</code> si se ha pulsado la tecla <code style="margin:0px;padding:0px">SHIFT</code> y <code style="margin:0px;padding:0px">false</code>en otro caso</td></tr><tr style="margin:0px;padding:0px"><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)"><code style="margin:0px;padding:0px">stopPropagation()</code></td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Función</td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Se emplea para detener el flujo de eventos de tipo<em style="margin:0px;padding:0px">bubbling</em></td></tr><tr style="margin:0px;padding:0px"><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)"><code style="margin:0px;padding:0px">target</code></td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Element</td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">El elemento que origina el evento</td></tr><tr style="margin:0px;padding:0px"><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)"><code style="margin:0px;padding:0px">timeStamp</code></td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Número</td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">La fecha y hora en la que se ha producido el evento</td></tr><tr style="margin:0px;padding:0px"><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)"><code style="margin:0px;padding:0px">type</code></td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">Cadena de texto</td><td style="margin:0px;padding:3px 10px;border:1px solid rgb(204,204,204)">El nombre del evento</td></tr></tbody></table>
+            </div>
+
+
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    </body>
+</html>
