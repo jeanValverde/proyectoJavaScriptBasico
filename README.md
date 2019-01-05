@@ -1,6 +1,6 @@
 # Proyecto de javaScript básico 
 
-_Proyecto que te mostrara lo básico en JavaScript, incluye_
+_Proyecto que te mostrara lo básico en JavaScript con Bootstrap, incluye_
 * [Manejo de variables](#)
 * [Tipos de datos](#)
 * [Arreglos](#)
