@@ -43,10 +43,6 @@ _Herramientas_
 * [HTML](https://es.wikipedia.org/wiki/HTML)
 * [JavaScript](https://www.javascript.com/)
 
-## Contribuyendo 🖇️
-
-Por favor lee el [CONTRIBUTING.md](https://gist.github.com/villanuevand/xxxxxx) para detalles de nuestro código de conducta, y el proceso para enviarnos pull requests.
-
 ## Versionado 📌
 
 Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones disponibles, mira los [tags en este repositorio](https://github.com/jeanValverde/proyectoJavaScriptBasico/tags).
